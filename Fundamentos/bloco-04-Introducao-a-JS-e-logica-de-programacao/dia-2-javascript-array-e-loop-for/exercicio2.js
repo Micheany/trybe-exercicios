@@ -7,3 +7,11 @@ for (let index = 0; index < numbers.length; index++) {
 }
 
 console.log("A soma dos elementos do array é: " + soma);
+
+soma = 0;
+
+for (const number of numbers) {
+    soma = soma + number;
+}
+
+console.log("A soma dos elementos do array é: " + soma);
