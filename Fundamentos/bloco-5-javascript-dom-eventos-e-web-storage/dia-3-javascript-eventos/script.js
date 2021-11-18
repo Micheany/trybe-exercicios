@@ -38,5 +38,14 @@ function createDaysOfTheWeek() {
   };
 
   createDezDay();
+
+  function creatButtonFeriado(feriados){
+    let holidayButton = document.createElement("button");
+    holidayButton.id = "btn-holiday";
+    holidayButton.innerHTML = feriados;
+    document.querySelector(".buttons-container").appendChild(holidayButton);
+  };
+
+  creatButtonFeriado('feriados');
   
  
