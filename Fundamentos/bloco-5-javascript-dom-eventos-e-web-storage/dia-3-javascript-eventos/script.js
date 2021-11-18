@@ -13,6 +13,8 @@ function createDaysOfTheWeek() {
   
   createDaysOfTheWeek();
 
+//1. Desenvolva uma função que crie dinamicamente cada dia do calendário e os adicione como filhos/filhas da tag <ul> com ID "days" e marque as classes de feriados e sextas feiras.
+
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]; 
 
   function createDezDay(){
@@ -39,6 +41,8 @@ function createDaysOfTheWeek() {
 
   createDezDay();
 
+//2. unção que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+
   function createButtonFeriado(feriados){
     let holidayButton = document.createElement("button");
     holidayButton.id = "btn-holiday";
@@ -48,28 +52,32 @@ function createDaysOfTheWeek() {
 
   createButtonFeriado('feriados');
 
+//3. botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que são feriados
+
   let buttonFeriados = document.querySelector('#btn-holiday');
   let feriados = document.querySelectorAll(".holiday");
   buttonFeriados.addEventListener('click', changeBackgButton);
  
   function changeBackgButton(){
-  
     let inicial = 'white';
-
     for (let index = 0; index < feriados.length; index++) {
         if(feriados[index].style.backgroundColor === inicial){
             feriados[index].style.backgroundColor = 'rgb(238,238,238)';
         }else{
         feriados[index].style.backgroundColor = inicial;
-    }
-    
-}
-
-  
-
-     
+        }
+    } 
   }
-  
+
+//4. Função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+
+function createbuttonFriday(friday){
+    let buttonFriday = document.createElement("button");
+    buttonFriday.id = "btn-friday";
+    buttonFriday.innerHTML = friday;
+    document.querySelector(".buttons-container").appendChild(buttonFriday);
+}
+createbuttonFriday('Sexta-Feira');
 
 
   
