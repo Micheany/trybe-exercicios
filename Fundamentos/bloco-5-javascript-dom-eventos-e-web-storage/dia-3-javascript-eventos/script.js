@@ -39,13 +39,38 @@ function createDaysOfTheWeek() {
 
   createDezDay();
 
-  function creatButtonFeriado(feriados){
+  function createButtonFeriado(feriados){
     let holidayButton = document.createElement("button");
     holidayButton.id = "btn-holiday";
     holidayButton.innerHTML = feriados;
     document.querySelector(".buttons-container").appendChild(holidayButton);
   };
 
-  creatButtonFeriado('feriados');
+  createButtonFeriado('feriados');
+
+  let buttonFeriados = document.querySelector('#btn-holiday');
+  let feriados = document.querySelectorAll(".holiday");
+  buttonFeriados.addEventListener('click', changeBackgButton);
+ 
+  function changeBackgButton(){
+  
+    let inicial = 'white';
+
+    for (let index = 0; index < feriados.length; index++) {
+        if(feriados[index].style.backgroundColor === inicial){
+            feriados[index].style.backgroundColor = 'rgb(238,238,238)';
+        }else{
+        feriados[index].style.backgroundColor = inicial;
+    }
+    
+}
+
+  
+
+     
+  }
+  
+
+
   
  
