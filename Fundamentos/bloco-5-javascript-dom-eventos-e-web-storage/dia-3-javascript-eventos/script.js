@@ -79,6 +79,32 @@ function createbuttonFriday(friday){
 }
 createbuttonFriday('Sexta-Feira');
 
+//5. unção que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+
+let daysFriday = document.querySelectorAll(".friday");
+let btnFriday = document.querySelector("#btn-friday");
+let initialText = [];
+for (let index = 0; index < daysFriday.length; index++) {
+    initialText.push(daysFriday[index].innerText);
+}
+
+
+btnFriday.addEventListener("click", clickBtnFriday);
+
+function clickBtnFriday(){
+    console.log(daysFriday)
+    
+    for (let index = 0; index < daysFriday.length; index++) {
+        if(daysFriday[index].innerText === initialText[index]){
+            daysFriday[index].innerText = 'Sextouu';
+
+        }else {
+            daysFriday[index].innerHTML = initialText[index];
+        }
+    }
+}
+
+
 
   
  
