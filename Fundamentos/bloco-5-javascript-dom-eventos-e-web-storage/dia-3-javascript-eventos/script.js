@@ -104,6 +104,21 @@ function clickBtnFriday(){
     }
 }
 
+//6. Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+
+let diaMes = document.querySelector("#days");
+diaMes.addEventListener("mouseover", mouseDiaMes);
+
+function mouseDiaMes (event){
+    event.target.style.fontsize = '35px';
+}
+
+let diasMes = document.querySelector("#days");
+diasMes.addEventListener("mouseout", mouseOutDiaMes);
+
+function mouseOutDiaMes (event){
+    event.target.style.fontsize = '20px';
+}
 
 
   

@@ -1,5 +1,7 @@
 body {
+    color: rgb(80, 80, 80);
     margin: 0;
+    background-color: rgb(235, 231, 231);
 }
 
 h1{
@@ -19,4 +21,28 @@ footer{
     max-width: 350px;
     margin: 0 auto;
     border: solid black 1px;
+}
+
+header{
+    background-color: rgb(255, 198, 13);
+    border-bottom: solid rgb(80, 80, 80) 1px;
+}
+
+header h2{
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    color: rgb(80, 80, 80);
+}
+
+header ul{
+    margin: 0;
+}
+
+header li{
+    border: solid rgb(80, 80, 80) 1px;
+    padding: 5px;
+    color: rgb(80, 80, 80);
+    display: inline-block;
+    margin: 10px;
 }

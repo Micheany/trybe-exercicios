@@ -22,3 +22,14 @@ for( key in info){
 for( key in info){
     console.log(info[key]);
 }
+
+//segundo objeto com as mesmas propriedades mas valores diferentes
+
+let infoPatinhas = {
+    personagem: ' Tio Patinhas',
+    origem: 'Christmas on Bear Mountain, Dell\'s Four Color Comics #178',
+    nota:  'O último MacPatinhas',
+    recorrente: 'Sim'
+  };
+
+  console.log( info.personagem +" " + infoPatinhas.personagem)
